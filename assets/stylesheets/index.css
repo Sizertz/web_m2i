@@ -1,0 +1,8 @@
+@import "reset.css";
+@import "./utils/layout.css";
+@import "./utils/fontwork.css";
+@import "./utils/padding.css";
+@import "./utils/txt-align.css";
+@import "./utils/z-index.css";
+@import "./template1/CV-template-1.css";
+

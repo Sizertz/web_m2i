@@ -1,0 +1,21 @@
+.txt-just {
+    text-align: justify
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+/* requires defined lang in html tag */
+/* broken on Chrome currently */
+.hyphenate {
+    hyphens: auto;
+}

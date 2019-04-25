@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Bootstrap example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./scripts/myFirstSCript.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Stacked form</h2>
+    <form action="" method="POST">
+      <!-- POST doesn't send through URL -->
+      <!-- Input form -->
+      <div class="form-group">
+        <label for="txtNom">Nom :</label>
+        <input type="text" class="form-control" id="txtNom" placeholder="Nom" name="txtNom">
+      </div>
+      <div class="form-group">
+        <label for="txtPrenom">Prénom :</label>
+        <input type="text" class="form-control" id="txtPrenom" placeholder="Prénom" name="txtPrenom">
+      </div>
+      <div class="form-group">
+        <label for="nPoids">Poids (en kg) :</label>
+        <input type="number" class="form-control" id="nPoids" placeholder="Poids en kg. ex: 68,7" name="nPoids" min="0"
+          step="0.1">
+      </div>
+      <div class="form-group">
+        <label for="nTaille">Taille (en m):</label>
+        <input type="number" class="form-control" id="nTaille" placeholder="Taille en m. ex: 1,75" name="nTaille"
+          min="0" step="0.01">
+      </div>
+      <div class="form-group">
+        <label for="nTaille">Sexe:</label>
+        <select id="lstSexe" name="lstSexe" class="form-control">
+          <option value="MASCULIN">Masculin</option>
+          <option value="FEMININ">Feminin</option>
+        </select>
+      </div>
+
+      <!-- OK button -->
+      <button type="button" class="btn btn-primary btn-block" onclick="Traitement();">Submit</button>
+      <!-- type="button" doesn't send data -->
+
+      <!-- Output -->
+      <div class="form-group">
+        <label for="txtIMC">Indice de masse corporelle :</label>
+        <input type="number" class="form-control" id="txtIMC" placeholder="IMC" name="txtIMC" readonly>
+      </div>
+      <div class="form-group">
+        <label for="txtDiagnostic">Diagnostic :</label>
+        <input type="text" class="form-control" id="txtDiagnostic" placeholder="Diagnostic" name="txtDiagnostic"
+          readonly>
+      </div>
+      <div class="form-group">
+        <label for="txtPoidsMin">Poids min pour être en bonne santé :</label>
+        <input type="number" class="form-control" id="txtPoidsMin" placeholder="PoidsMin" name="txtPoidsMin" step="0.1"
+          readonly>
+      </div>
+      <div class="form-group">
+        <label for="txtPoidsMax">Poids max pour être en bonne santé :</label>
+        <input type="number" class="form-control" id="txtPoidsMax" placeholder="PoidsMax" name="txtPoidsMax" step="0.1"
+          readonly>
+      </div>
+      <div class="form-group">
+        <label for="txtPoidsIdeal">Poids idéal :</label>
+        <input type="number" class="form-control" id="txtPoidsIdeal" placeholder="PoidsIdeal" name="txtPoidsIdeal"
+          step="0.1" readonly>
+      </div>
+    </form>
+  </div>
+
+
+
+</body>
+
+</html>

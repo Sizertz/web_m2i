@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Bootstrap example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./scripts/myFirstSCript.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Stacked form</h2>
+    <form action="" method="POST">
+      <!-- POST doesn't send through URL -->
+      <!-- Input form -->
+      <div class="form-group row">
+        <label for="txtNom" class="col-md-2 col-form-label">Nom :</label>
+        <input type="text" class="form-control col-md-4" id="txtNom" placeholder="Nom" name="txtNom">
+
+        <label for="txtPrenom" class="col-md-2 col-form-label">Prénom :</label>
+        <input type="text" class="form-control col-md-4" id="txtPrenom" placeholder="Prénom" name="txtPrenom">
+      </div>
+      <div class="form-group row">
+        <label for="nPoids" class="col-md-2 col-form-label">Poids (en kg) :</label>
+        <input type="number" class="form-control col-md-4" id="nPoids" placeholder="Poids en kg. ex: 68,7" name="nPoids"
+          min="0" step="0.1">
+
+        <label for="nTaille" class="col-md-2 col-form-label">Taille (en m):</label>
+        <input type="number" class="form-control col-md-4" id="nTaille" placeholder="Taille en m. ex: 1,75" name="nTaille"
+          min="0" step="0.01">
+      </div>
+      <div class="form-group row">
+        <label for="lstSexe" class="col-md-2 col-form-label">Sexe:</label>
+        <select onchange="" id="lstSexe" name="lstSexe" class="form-control col-md-10">
+          <option value="MASCULIN">Masculin</option>
+          <option value="FEMININ">Feminin</option>
+        </select>
+      </div>
+
+      <!-- OK button -->
+      <div class="form-group">
+      <button type="button" class="btn btn-primary btn-block" onclick="Traitement();">Submit</button>
+      </div>
+      <!-- type="button" doesn't send data -->
+
+      <!-- Output -->
+      <div class="form-group row">
+        <label for="txtIMC" class="col-md-4 col-form-label">Indice de masse corporelle :</label>
+        <input type="number" class="form-control-plaintext col-md-8" id="txtIMC" placeholder="IMC" name="txtIMC" readonly>
+      </div>
+      <div class="form-group row">
+        <label for="txtDiagnostic" class="col-md-4 col-form-label">Diagnostic :</label>
+        <input type="text" class="form-control col-md-8" id="txtDiagnostic" placeholder="Diagnostic" name="txtDiagnostic"
+          readonly>
+      </div>
+      <div class="form-group row">
+        <label for="txtPoidsMin" class="col-md-4 col-form-label">Poids min pour être en bonne santé :</label>
+        <input type="number" class="form-control col-md-8" id="txtPoidsMin" placeholder="PoidsMin" name="txtPoidsMin" step="0.1"
+          readonly>
+      </div>
+      <div class="form-group row">
+        <label for="txtPoidsMax" class="col-md-4 col-form-label">Poids max pour être en bonne santé :</label>
+        <input type="number" class="form-control col-md-8" id="txtPoidsMax" placeholder="PoidsMax" name="txtPoidsMax" step="0.1"
+          readonly>
+      </div>
+      <div class="form-group row">
+        <label for="txtPoidsIdeal" class="col-md-4 col-form-label">Poids idéal :</label>
+        <input type="number" class="form-control col-md-8" id="txtPoidsIdeal" placeholder="PoidsIdeal" name="txtPoidsIdeal"
+          step="0.1" readonly>
+      </div>
+    </form>
+
+
+
+  </div>
+</body>
+
+</html>

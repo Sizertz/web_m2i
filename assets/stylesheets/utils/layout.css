@@ -1,0 +1,36 @@
+.ovfl-hidden {
+    overflow: hidden;
+}
+
+.scroll-v {
+    overflow: auto;
+}
+
+.left-fixed-col {
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+
+}
+
+.main-block {
+    position: relative;
+    left: 25%;
+    top: 0;
+    width: 75%;
+    height: 90%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.footer-block{
+    
+}

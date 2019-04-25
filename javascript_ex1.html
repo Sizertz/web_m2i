@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Exo 1</title>
+    <script>
+        
+    </script>
+    <script src="./scripts/myFirstSCript.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <!-- table row -->
+                <td>Nom</td> <!-- table  data-->
+                <td><input type="text" id="txtNom" /></td>
+            </tr>
+
+            <tr>
+                <td>Prénom</td>
+                <td><input type="text" id="txtPrenom" /></td>
+            </tr>
+
+            <tr>
+                <td>Sexe</td>
+                <td><select id="lstSexe">
+                    <option value="MASCULIN">Masculin</option>
+                    <option value="FEMININ">Féminin</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td>Taille en m</td>
+                <td><input type="number" id="nTaille" step="0.01" /></td>
+            </tr>
+
+            <tr>
+                <td>Poids en kg</td>
+                <td><input type="number" id="nPoids" step="0.1" /></td>
+            </tr>
+
+            <tr>
+                <!-- <td><input type="reset"/></td> reset form -->
+                <!-- <td><input type="submit"/></td> send to server -->
+                <td colspan="2" align="center"><input type="button" id="cmdCalculer" value="CALCULER"
+                        onclick="Traitement()" /></td>
+            </tr>
+
+            <tr>
+                <td>IMC</td>
+                <td><input type="txt" id="txtIMC" readonly /></td>
+            </tr>
+
+            <tr>
+                <td>Poids Min</td>
+                <td><input type="txt" id="txtPoidsMin" readonly /></td>
+            </tr>
+
+            <tr>
+                <td>Poids Max</td>
+                <td><input type="txt" id="txtPoidsMax" readonly /></td>
+            </tr>
+
+            <tr>
+                <td>Poids Idéal</td>
+                <td><input type="txt" id="txtPoidsIdeal" readonly /></td>
+            </tr>
+
+
+            <tr>
+                <td>Diagnostic</td>
+                <td><input type="txt" id="txtDiagnostic" readonly /></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+</body>
+
+</html>

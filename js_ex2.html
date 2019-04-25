@@ -1,0 +1,35 @@
+<html lang="fr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+</head>
+
+<body>
+    <script>
+        var a = function (x, y) { return x + y; };
+        var b,p,c;
+        // alert(typeof a);
+        // alert( a);
+        function operation(a, b, f) {
+            return f(a, b);
+        }
+        // alert((typeof b) == "undefined"); /* true */
+
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+            this.Affiche = function () {
+                alert("(" + this.x + ", " + this.y + ")");
+            }
+        }
+        b=1;
+        c=12;
+        var p = new Point(b,c);
+        p.Affiche();
+        b=13;
+        p.Affiche();
+    </script>
+</body>
+
+</html>

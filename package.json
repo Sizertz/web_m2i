@@ -1,0 +1,15 @@
+{
+  "name": "html_m2i_simon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "material-design-icons": "^3.0.1",
+    "roboto-fontface": "^0.10.0"
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Hiding example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./scripts/primes.js"></script>
+</head>
+
+<body onload="hidePrimes();">
+    <div class="container">
+        <h2>Calcul des primes</h2>
+
+        <form action="">
+            <div class="form-group row">
+                <!-- Nom -->
+                <label class="col-form-label col-md-2" for="txtNom">Nom</label>
+                <input type="text" name="txtNom" id="txtNom" class="form-control col-md-4">
+
+                <!-- Prenom -->
+                <label class="col-form-label col-md-2" for="txtPrenom">Prenom</label>
+                <input type="text" name="txtPrenom" id="txtPrenom" class="form-control col-md-4">
+            </div>
+            <div class="form-group row">
+                <!-- Salaire -->
+                <label class="col-form-label col-md-2" for="nSalaire">Salaire</label>
+                <input type="number" name="nSalaire" id="nSalaire" class="form-control col-md-4" min="0" step="0.01">
+
+                <!-- Enfants -->
+                <label class="col-form-label col-md-2" for="nEnfants">Nombre d'enfants</label>
+                <input type="number" name="nEnfants" id="nEnfants" class="form-control col-md-4" min="0" step="1">
+            </div>
+
+
+            <!-- Checkboxes primes -->
+            <div class="form-group row">
+                <label class="col-form-label col-md-2">Sélectionner les primes à afficher :</label>
+                <!-- Checkbox Prime Salaire -->
+                <div class="form-check form-check-inline col-auto">
+                    <input type="checkbox" name="chkSalaire" id="chkSalaire" class="form-check-input">
+                    <label class="form-check-label" for="chkSalaire">Prime Salaire</label>
+                </div>
+                <!-- Checkbox Prime Enfants  -->
+                <div class="form-check form-check-inline col-auto">
+                    <input type="checkbox" name="chkEnfants" id="chkEnfants" class="form-check-input">
+                    <label class="form-check-label" for="chkEnfants">Prime Enfants</label>
+                </div>
+                <!-- Checkbox Prime Totale -->
+                <div class="form-check form-check-inline col-auto">
+                    <input type="checkbox" name="chkTotal" id="chkTotal" class="form-check-input">
+                    <label class="form-check-label" for="chkTotal">Prime Totale</label>
+                </div>
+            </div>
+
+            <!-- OK button -->
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-block"
+                    onclick="calculerPrimes();showPrimes();">Calculer</button>
+            </div>
+
+
+            <div class="form-group row" id="divPrimeSalaire">
+                <!-- Prime Salaire -->
+                <label class="col-form-label col-md-2" for="txtPrimeSalaire">Prime Salaire</label>
+                <input type="text" name="txtPrimeSalaire" id="txtPrimeSalaire" class="form-control col-md-2" value="0"
+                    readonly>
+            </div>
+            <div class="form-group row" id="divPrimeEnfants">
+
+                <!-- Prime Enfants -->
+                <label class="col-form-label col-md-2" for="txtPrimeEnfants">Prime Enfants</label>
+                <input type="text" name="txtPrimeEnfants" id="txtPrimeEnfants" class="form-control col-md-2" value="0"
+                    readonly>
+            </div>
+            <div class="form-group row" id="divPrimeTotale">
+                <!-- Prime Totale -->
+                <label class="col-form-label col-md-2" for="txtPrimeTotale">Prime Totale</label>
+                <input type="text" name="txtPrimeTotale" id="txtPrimeTotale" class="form-control col-md-2" value="0"
+                    readonly>
+            </div>
+
+
+        </form>
+    </div>
+</body>
+
+</html>

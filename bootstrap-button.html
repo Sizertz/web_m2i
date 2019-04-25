@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Bootstrap button demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./scripts/myFirstSCript.js"></script>
+</head>
+
+<body onload="ChangeButton();">
+    <!-- Button formatting demo -->
+    <div class="container">
+        <h2>Démo boutons</h2>
+        <form action="">
+            <div class="form-group row">
+                <!-- Sélection couleur -->
+                <label for="lstCouleur" class="col-md-2 col-form-label">Couleur :</label>
+                <select class="form-control col-md-4" id="lstCouleur" onchange="ChangeButton();">
+                    <option value="primary">Bleu (Primary)</option>
+                    <option value="secondary">Gris (Secondary)</option>
+                    <option value="success">Vert (Success)</option>
+                    <option value="danger">Rouge (Danger)</option>
+                    <option value="warning">Jaune (Warning)</option>
+                    <option value="info">Cyan (Info)</option>
+                    <option value="light">Blanc (Light)</option>
+                    <option value="dark">Noir (Dark)</option>
+                    <option value="link">Lien</option>
+                </select>
+                <!-- Outline option -->
+                <div class="container col-md-6">
+                    <div class="form-check form-check-inline col-md-4">
+
+                        <input type="checkbox" class="form-check-input" value="-outline" id="chkOutline" onchange="ChangeButton();">
+                        <label class="form-check-label" for="chkOutline" >
+                            Outline
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+            <!-- button -->
+            <div class="form-group">
+                    <button type="button" class="btn btn-primary" id="button" >Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
