@@ -58,8 +58,21 @@ interfaces your OOP objects with your Relational DB entries
 
 At least implements CRUD operations => DAO interface:
 
+```Java
+public interface DAO<T> {	
+	public int create(T obj);	
+	public T retrieve(int id);	
+	public List<T> retrieveAll();	
+	public int delete(int id);	
+	public int update(T obj);
+}
+```
 
+# Java
 
+## Abstract methods
+
+static methods cannot be abstract and cannot be overriden
 
 
 # Threads

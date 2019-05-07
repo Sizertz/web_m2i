@@ -124,6 +124,10 @@ SELECT table1.col1, table2.col2 FROM table1 LEFT JOIN table2 ON table1.col2 = ta
 
 -- FULL JOIN does the same as INNER JOIN but also adds 1 entry for each table1 and table2 entry that doesn't fit the ON condition
 SELECT table1.col1, table2.col2 FROM table1 LEFT JOIN table2 ON table1.col2 = table2.col2
+
+-- To let Auto_Increment manage IDs, you need to fetch the ID after insertion with:
+INSERT INTO `eleve`(`Nom`, `Prenom`, `ID_Classe`) VALUES ("foo","bar",1);
+SELECT ID_Eleve AS LastID FROM eleve WHERE ID_Eleve = @@Identity
 ```        
 
     WHERE operators:
