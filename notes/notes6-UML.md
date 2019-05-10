@@ -125,6 +125,7 @@ ___
 2. L'association
     * structurel
     * ligne pleine
+    * l'un _possède_ l'autre
     * cas particulier : composition
         * un tout et ses parties
         1. composition forte
@@ -140,13 +141,13 @@ ___
 ___
 ## Les diagrammes
 
-diag de classe
-diag de d'objets
+diag de classe 
+diag de d'objets = au niveau des instances
 diag de cas d'utilisation
-diag de séquence
+diag de séquence = life lines
 diag de collaboration
-diag de états-transitions
-diag de activités
+diag d'états-transitions
+diag d'activités ~= organigramme
 diag de composants
 diag de déploiement
 
@@ -196,3 +197,7 @@ ___
 draw.io
 
 visual paradigm
+
+pour lundi : qu'est-ce que fork et join dans un diagramme d'activité ?
+
+servlet, JPA, hibernate, javaFX, node, xpress, angular, JSF
