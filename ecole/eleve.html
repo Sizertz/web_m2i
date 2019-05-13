@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/images/cat-2083492_960_720.jpg" width="" height="32" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Qui sommes-nous?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nous contacter</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-target="#loginModalCentered"
+                        data-toggle="modal">Log-in</button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModalCentered" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Log-in</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form>
+                            <div class="form-group">
+                                <label for="txtUsername">Identifiant</label>
+                                <input type="txt" class="form-control" id="txtUsername" aria-describedby="emailHelp"
+                                    placeholder="Entrez identifiant">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtPassword">Mot de passe</label>
+                                <input type="password" class="form-control" id="twtPassword"
+                                    placeholder="Entrez mot de passe">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Me connecter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Class selection form -->
+        <form>
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Classe</div>
+                </div>
+                <select class="form-control" id="selectClasse">
+                    <option>CP1</option>
+                    <option>CP2</option>
+                    <option>CP3</option>
+                    <option>CP4</option>
+                    <option>CP5</option>
+                </select>
+            </div>
+        </form>
+
+        <!-- Table des eleves -->
+        <form>
+            <table class="table">
+                <!-- En-tetes -->
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <!-- donnees -->
+                <tbody id="tableEleve">
+                    <!-- modifiable state -->
+                    <tr>
+                        <td><button type="button" class="btn btn-primary">Sélectionner</button></td>
+                        <td>
+                            <input type="txt" class="form-control" id="txtNomEleve1"
+                                placeholder="Entrez le nom de famille" value="Chabat">
+                        </td>
+                        <td><input type="txt" class="form-control" id="txtPrenomEleve1" placeholder="Entrez le prénom"
+                                value="Alain"></td>
+                        <td><button type="button" class="btn btn-outline-primary">Modifier</button></td>
+                        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
+                    </tr>
+                    <!-- readonly state -->
+                    <tr>
+                        <td><button type="button" class="btn btn-primary">Sélectionner</button></td>
+                        <td>
+                            <input type="txt" class="form-control-plaintext" id="txtNomEleve1"
+                                placeholder="Entrez le nom de famille" value="Dupont">
+                        </td>
+                        <td><input type="txt" class="form-control-plaintext" id="txtPrenomEleve1"
+                                placeholder="Entrez le prénom" value="Baptiste"></td>
+                        <td><button type="button" class="btn btn-outline-primary">Modifier</button></td>
+                        <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="form-control btn btn-outline-primary mb-2" name="btnAddEleve">Nouvel
+                élève</button>
+            <button type="button" class="form-control btn btn-primary mb-2">Enregistrer changements aux élèves</button>
+        </form>
+
+
+
+
+
+
+        <!-- collapsible block -->
+        <div class="collapse" id="collapseExample">
+            <!-- pretty card frame -->
+            <div class="card card-body">
+                <!-- table des notes -->
+                <form>
+                    <table class="table" name="tableNotes">
+                        <!-- En-tetes -->
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Note</th>
+                                <th scope="col">Matière</th>
+                                <th scope="col">Date</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <!-- Contenu : notes -->
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <input type="txt" class="form-control" id="txtUsername" placeholder="Entrez un note"
+                                        value="10">
+                                </td>
+                                <td>
+                                    <select class="form-control" id="selectMatiereNote1">
+                                        <option>Anglais</option>
+                                        <option>Français</option>
+                                        <option selected="selected">Java</option>
+                                        <option>SI</option>
+                                    </select>
+                                </td>
+                                <td><input type="date" class="form-control" id="dateNote1" value="2019-03-05"></td>
+                                <td><a href="#">Modifier</a></td>
+                                <td><a href="#">Supprimer</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    <input type="txt" class="form-control-plaintext" id="txtUsername"
+                                        placeholder="Entrez un note" value="10">
+                                </td>
+                                <td>
+                                    <select class="form-control-plaintext" id="selectMatiereNote1" readonly>
+                                        <option>Anglais</option>
+                                        <option>Français</option>
+                                        <option selected="selected">Java</option>
+                                        <option>SI</option>
+                                    </select>
+                                </td>
+                                <td><input type="date" class="form-control-plaintext" id="dateNote1" value="2019-03-05">
+                                </td>
+                                <td><button type="button" class="btn btn-outline-primary">Modifier</button></td>
+                                <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>18</td>
+                                <td>Sport</td>
+                                <td>06/05/05</td>
+                                <td><button type="button" class="btn btn-outline-primary">Modifier</button></td>
+                                <td><button type="button" class="btn btn-outline-danger">Supprimer</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-primary mb-2" onclick="">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./dynamicTables.js"></script>
+
+</body>
+
+</html>

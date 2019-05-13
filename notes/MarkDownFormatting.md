@@ -6,7 +6,7 @@ _italique_
 
 **gras**
 
-__grasv2__
+__gras__
 
 `html <code> tag`
 
